@@ -101,6 +101,9 @@ header {
   color: #fff;
   font-weight: bold;
 }
+.menu-icon{
+  display: none;
+}
 
 /* Articles */
 .main-article {
@@ -176,4 +179,117 @@ header {
   background-color: #007bff;
 }
   
-/* Write your CSS below */
+/* Mobile Section*/
+@media (max-width: 760px)
+{
+  .navbar{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+  }
+  .navbar li {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid white;
+  }
+  .navbar li:last-child(){
+    border-bottom: none;
+  }
+  .main-article {
+
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+  }
+  .main-article .image {
+    width: 100%;
+    padding: 0 20px;
+    height: auto;
+  }
+  
+  .main-article .content {
+    width: 100%;
+    padding: 20px 20px;
+    height: auto;
+  }
+  .articles-container {
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    padding: 0;
+    ;
+  }
+
+.article {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.article img {
+  width: 100%;
+  height: auto;
+
+}
+}
+/*Tablet Section*/
+
+@media(min-width: 760px) and (max-width: 1024px) {
+
+    .main-article {
+      flex-direction: row;
+      
+      width: 100%;
+    
+      margin: 20px 0;
+      
+    }
+  
+    /* Align the image on the left and content on the right */
+    .main-article .image,
+    .main-article .content {
+      width: 50%;
+      /* Divide the width equally between image and content */
+    }
+  
+    /* Adjust the main article image to fit */
+    .main-article img {
+      width: 100%;
+      
+      height: auto;
+      
+    }
+  .navbar li {
+    width: 100%;
+  }
+
+  .articles-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+
+
+  }
+  .article {
+    width: 40%;
+    margin: 30px 0px;
+  }
+}
+
+/*Small Mobile Screen section*/
+@media(max-width:480px){
+  .navbar{
+    display: none;
+  }
+  .menu-icon{
+    display:block;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+}
+
